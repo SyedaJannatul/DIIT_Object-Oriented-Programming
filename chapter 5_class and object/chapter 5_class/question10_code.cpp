@@ -16,7 +16,6 @@ class time
 };
 void time::sum(time t11,time t22)
 {
-    int temp_h;
     minutes = t11.minutes + t22.minutes;
     hours = minutes/60;
     minutes = minutes%60;

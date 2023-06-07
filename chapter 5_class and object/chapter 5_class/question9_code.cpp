@@ -17,7 +17,6 @@ class time
 };
 void time::sum(time t1)
 {
-    int temp_h;
     minutes = (t1.hours*60) + t1.minutes;
     minutes = minutes*t1.scalar;
     hours = minutes/60;
