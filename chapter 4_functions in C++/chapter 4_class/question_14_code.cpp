@@ -4,6 +4,7 @@
 #include <iomanip>
 #define accuracy 0.0001
 using namespace std;
+
 double factorial(int num)
 {
     int j;
@@ -22,7 +23,7 @@ int signcalc(int theta)
         theta = theta%360;
     }
 
-    if(theta=>0 && theta<=180)
+    if(theta>=0 && theta<=180)
     {
         s=1;
     }
@@ -36,13 +37,14 @@ int signcalc(int theta)
 }
 float calc(float x,int s)
 {
-    int i, sign;
+    int i, sign,n=0;
     float temp=0.0, sum=0.0;
     sign = s;
     for(i = 1; ; i += 2)
     {
-        temp = sign * pow(x,i) / factorial(i);
-        sum = sum + temp;
+        temp = pow(x,i) / factorial(i);
+        sum = sum + (sign * temp);
+        n++;
         if(temp<=accuracy)
             break;
         temp = 0.0;
@@ -57,7 +59,7 @@ int main()
     float radian, result;
     cout<<"Enter value of angle(x) in degrees : ";
     cin>>deg;
-    radian = deg * (3.14159 / 180.0); // Convert from degree to radian
+    radian = deg * (3.1416 / 180.0); // Convert from degree to radian
     si = signcalc(deg);
     result = calc(radian,si);
     cout<<"sin("<<deg<<") = ";
