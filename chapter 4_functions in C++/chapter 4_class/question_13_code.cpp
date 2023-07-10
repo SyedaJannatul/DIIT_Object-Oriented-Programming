@@ -1,6 +1,5 @@
 #include<iostream>
 #include<math.h>
-#include <iostream>
 #include <iomanip>
 #define accuracy 0.0001
 using namespace std;
