@@ -3,7 +3,7 @@
 #include<iomanip>
 using namespace std;
 
-float dg_rd(int x);
+float dg_rd(float x);
 int factorial(int f);
 
 float dg_rd(float x)
