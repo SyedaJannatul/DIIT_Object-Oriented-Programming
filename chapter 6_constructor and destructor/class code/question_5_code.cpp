@@ -9,7 +9,7 @@ class add
         {
             sum = 0;
         }
-        add(int a,int b,int c = 10) //default argument constructor
+        add(int a=5,int b=7,int c = 10) //default argument constructor
         {
             sum = a + b + c;
             cout<<"Sum = "<<sum<<endl;
