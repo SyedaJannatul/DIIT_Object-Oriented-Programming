@@ -1,0 +1,21 @@
+ios::in  	//by default in ifstream
+
+ios::out 	//by default in ofstream
+
+ios::app 	//point to last of the text and can not modify the previous text
+
+ios::ate 	//point to last of the text but can modify the previous text
+
+ios::nocreate   //if the mentioned name of the file does not exist then it does not create new file with that name
+
+ios::noreplace  //if the mentioned name of the file already exist then it does not create new file with that name(i.e. does not replace the existing file with new file)
+
+ios::Binary	//to create binary file
+
+ios::trunc	//to erase previous text in the file which is by default in ofstream
+--------------------------------------------------------------------------------------------
+
+USING MULTIIPLE MODES
+
+ofstream obj;
+obj.open("data2.txt",ios::ate|ios::noreplace);
